@@ -82,5 +82,5 @@ http_locc=HTTPProvider(URL_RPC_access,id_shdw,passwd_shdw)
 http_client = Client("https://api.mainnet-beta.solana.com")
 #We change the http connector of the regular account with the custom made http connectooor
 http_client._provider=http_locc
-
+usdc_address="7kEHXrMauf9DhdTTueb4SB5R1eZWtMhm3gzDWTtbDjut" #Token account of USDC
 print(http_client.get_token_account_balance(usdc_address)["result"]["value"]['uiAmount'])
